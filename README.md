@@ -4,7 +4,7 @@
 
 Recently, [President Biden’s announced his COVID vaccination attestation mandate](https://www.cbsnews.com/live-updates/biden-covid-19-vaccine-mandate-live-stream-today-2021-09-09/) for employers and it impacts both the public and private sectors.
 
-![Screenshot of home screen](./assets/home-screen-clean.png)
+![Screenshot of home screen](../../wiki/assets/home-screen-clean.png)
 
 ## Attestation Solutions
 
@@ -25,8 +25,8 @@ The Microsoft Dataverse for Teams solution can be upgraded to the **[Microsoft D
 
 Solution|Commercial|GCC|GCC High|GCC DoD
 -|-|-|-|-
-Microsoft Teams Dataverse|![Supported](./assets/supported.png)|![Supported](./assets/supported.png)|![Not Supported](./assets/not-supported.png)|![Not Supported](./assets/not-supported.png)
-Microsoft Dataverse|![Supported](./assets/supported.png)|![Supported](./assets/supported.png)|![Not Supported](./assets/supported.png)|![Not Supported](./assets/supported.png)
+Microsoft Teams Dataverse|![Supported](../../wiki/assets/supported.png)|![Supported](../../wiki/assets/supported.png)|![Not Supported](../../wiki/assets/not-supported.png)|![Not Supported](../../wiki/assets/not-supported.png)
+Microsoft Dataverse|![Supported](../../wiki/assets/supported.png)|![Supported](../../wiki/assets/supported.png)|![Not Supported](../../wiki/assets/supported.png)|![Not Supported](../../wiki/assets/supported.png)
 
 ## Solution Functionality
 
