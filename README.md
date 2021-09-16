@@ -1,41 +1,12 @@
-
-
 ## Overview
 
-Recently, [President Biden’s announced his COVID vaccination attestation mandate](https://www.cbsnews.com/live-updates/biden-covid-19-vaccine-mandate-live-stream-today-2021-09-09/) for employers and it impacts both the public and private sectors.
+Recently, [the President announced the COVID vaccination attestation mandate](https://www.whitehouse.gov/briefing-room/speeches-remarks/2021/09/09/remarks-by-president-biden-on-fighting-the-covid-19-pandemic-3/) for employers and the impact to the public sector and the private sector. This solution provides organizations with a PowerApp to deploy in response to the mandate.
 
 ![Screenshot of home screen](../../wiki/assets/home-screen-clean.png)
 
-## Attestation Solutions
+## Getting Started
 
-There are a few variations of the solution and different factors within your organization will drive what version to use.  These include, but not limited to:
-*  Organization Size
-*  Microsoft 365 Version
-*  Power Platform Licensing
-
-### Microsoft Dataverse for Teams
-
-The **[Microsoft Dataverse for Teams](https://docs.microsoft.com/en-us/power-platform/admin/about-teams-environment)** solution is for organizations that have Microsoft 365 licensing.  Organizations can deploy it as is or customize it to meet their requirements. Dataverse for Teams has a 2GB limit for environment (data) per team.  If you need more than 2GB of data, you will need to deploy to multiple teams or archive or remove previous attestations based on your organizations retention policy.
-
-### Microsoft Dataverse ###
-
-The Microsoft Dataverse for Teams solution can be upgraded to the **[Microsoft Dataverse](https://docs.microsoft.com/en-us/powerapps/maker/data-platform/data-platform-intro)** if your organization has Power Platform user or app licensing.  The benefits of the Microsft Dataverse includes environment (data) size limit of 4TB.
-
-## Microsoft Compatability
-
-Solution|Commercial|GCC|GCC High|GCC DoD
--|-|-|-|-
-Microsoft Teams Dataverse|![Supported](../../wiki/assets/supported.png)|![Supported](../../wiki/assets/supported.png)|![Not Supported](../../wiki/assets/not-supported.png)|![Not Supported](../../wiki/assets/not-supported.png)
-Microsoft Dataverse|![Supported](../../wiki/assets/supported.png)|![Supported](../../wiki/assets/supported.png)|![Not Supported](../../wiki/assets/supported.png)|![Not Supported](../../wiki/assets/supported.png)
-
-## Solution Functionality
-
-Users are able to: 
-*  [Submit an attestation for themselves](https://github.com/microsoft/mwx-teams-vaccine-attestation/wikiteams-dataverse/submit-attestation).*  [Submit an attestation onbehalf of another person](https://github.com/microsoft/mwx-teams-vaccine-attestation/wikiteams-dataverse/submit-attestation-onbehalf).
-*  [View their attestation submissions](https://github.com/microsoft/mwx-teams-vaccine-attestation/wikiteams-dataverse/view-submissions)
-
-Admins are able to:
-*  [Export vaccine attestation data for reporting](https://github.com/microsoft/mwx-teams-vaccine-attestation/wikiteams-dataverse/exporting-attestation-data)
+Visit the [Wiki](../../wiki) for information on getting started with this project.
 
 ## Disclaimer
 
