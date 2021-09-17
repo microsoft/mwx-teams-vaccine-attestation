@@ -1,25 +1,7 @@
-# TODO: The maintainer of this repo has not yet edited this file
+## Disclaimer
 
-**REPO OWNER**: Do you want Customer Service & Support (CSS) support for this product/project?
+THIS CODE IS PROVIDED AS IS WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
 
-- **No CSS support:** Fill out this template with information about how to file issues and get help.
-- **Yes CSS support:** Fill out an intake form at [aka.ms/spot](https://aka.ms/spot). CSS will work with/help you to determine next steps. More details also available at [aka.ms/onboardsupport](https://aka.ms/onboardsupport).
-- **Not sure?** Fill out a SPOT intake as though the answer were "Yes". CSS will help you decide.
+## Getting Help
 
-*Then remove this first heading from this SUPPORT.MD file before publishing your repo.*
-
-# Support
-
-## How to file issues and get help  
-
-This project uses GitHub Issues to track bugs and feature requests. Please search the existing 
-issues before filing new issues to avoid duplicates.  For new issues, file your bug or 
-feature request as a new Issue.
-
-For help and questions about using this project, please **REPO MAINTAINER: INSERT INSTRUCTIONS HERE 
-FOR HOW TO ENGAGE REPO OWNERS OR COMMUNITY FOR HELP. COULD BE A STACK OVERFLOW TAG OR OTHER
-CHANNEL. WHERE WILL YOU HELP PEOPLE?**.
-
-## Microsoft Support Policy  
-
-Support for this **PROJECT or PRODUCT** is limited to the resources listed above.
+If you find you're having difficulty installing the solution, have found what you believe is a bug, or just have general questions please submit an issue in the repository. We try to monitor and respond to issues as fast as you can.
