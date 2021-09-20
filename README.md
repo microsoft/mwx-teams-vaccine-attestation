@@ -5,7 +5,7 @@
 
 Recently, [the President announced the COVID vaccination attestation mandate](https://www.whitehouse.gov/briefing-room/speeches-remarks/2021/09/09/remarks-by-president-biden-on-fighting-the-covid-19-pandemic-3/) for employers and the impact to the public sector and the private sector. This solution provides organizations with a PowerApp to deploy in response to the mandate.
 
-![Screenshot of home screen](../../wiki/assets/home-screen-clean.png)
+![Screenshot of home screen](https://github.com/microsoft/mwx-teams-vaccine-attestation/wiki/assets/home-screen-clean.png)
 
 ### Key features
 * **Submit an Attestation:** Easily submit an attestation for yourself or on behalf of another person.
