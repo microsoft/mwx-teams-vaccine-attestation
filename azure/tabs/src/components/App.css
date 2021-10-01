@@ -1,0 +1,14 @@
+.header {
+  width: 100%;
+  background-color: rgba(239,239,239,1);
+  color: rgba(98, 100, 167, 1);
+  height: 75px;
+}
+
+.footer {
+  width: 100%;
+  background-color: rgba(239,239,239,1);
+  color: rgba(98, 100, 167, 1);
+  height: 75px;
+  text-align: center;
+}

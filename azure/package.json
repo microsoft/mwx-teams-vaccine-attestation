@@ -1,0 +1,18 @@
+{
+    "name": "VaxApp",
+    "version": "0.0.1",
+    "description": "Recently, the President announced the COVID vaccination attestation mandate for employers and the impact to the public sector and the private sector. This solution provides organizations with a Teams app to deploy in response to the mandate.",
+    "author": "TAAG",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "devDependencies": {
+        "@microsoft/teamsfx-cli": "0.*"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "@fluentui/react": "^8.35.0",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    }
+}
