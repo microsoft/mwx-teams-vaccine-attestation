@@ -5,6 +5,7 @@
   "dependencies": {
     "@fluentui/react": "^8.35.2",
     "@fluentui/react-northstar": "^0.54.0",
+    "@microsoft/microsoft-graph-types": "^2.8.0",
     "@microsoft/teams-js": "^1.6.0",
     "@microsoft/teamsfx": "^0.2.0",
     "axios": "^0.21.1",

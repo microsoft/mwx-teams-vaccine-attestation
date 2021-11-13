@@ -5,7 +5,7 @@
     "id": "{appid}",
     "packageName": "com.microsoft.taag.vaxapp.azure",
     "developer": {
-        "name": "Teams App, Inc.",
+        "name": "Teams App Acceleration for Gov",
         "websiteUrl": "{baseUrl}",
         "privacyUrl": "{baseUrl}/index.html#/privacy",
         "termsOfUseUrl": "{baseUrl}/index.html#/termsofuse"

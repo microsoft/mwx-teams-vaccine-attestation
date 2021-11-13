@@ -1,8 +1,10 @@
 import React from "react";
-import { Stack, IStackStyles, IStackTokens, IStackItemStyles, IIconProps, initializeIcons } from '@fluentui/react';
+import { initializeIcons } from '@fluentui/react';
 import { TooltipHost, ITooltipHostStyles } from '@fluentui/react/lib/Tooltip';
-import { IconButton } from '@fluentui/react/lib/Button';
-import { Image, IImageProps } from '@fluentui/react/lib/Image';
+import { IconButton, IButtonStyles } from '@fluentui/react/lib/Button';
+import { Image, IImageProps, IImageStyleProps } from '@fluentui/react/lib/Image';
+import { FontIcon, IIconProps, IIconStyles, IIconStyleProps } from '@fluentui/react/lib/Icon';
+import { mergeStyles } from '@fluentui/react/lib/Styling';
 import "./../App.css";
 import IHeaderProps from "./../../interfaces/IHeaderProps";
 
@@ -15,104 +17,63 @@ class Header extends React.Component<IHeaderProps> {
     super(props);
     initializeIcons();
   }
+
+  private goToHome = () => {           
+    this.props.history.push('Home');    
+  };
   
-  render() {
+  private goBack = () => {
+    this.props.history.goBack();
+  }
 
-    // Non-mutating styles definition
-    const textStackItemStyles: IStackItemStyles = {
-      root: {
-        alignItems: 'center',
-        display: 'flex',
-        height: 75,
-        justifyContent: 'center',
-        overflow: 'hidden',
-      },
-    };
-
-    const buttonStackItemStyles: IStackItemStyles = {
-      root: {
-        alignItems: 'center',    
-        display: 'flex',
-        height: 75,
-        justifyContent: 'center',
-        overflow: 'hidden',
-        width: 70,
-      },
-    };
-
-    const logoStackItemStyles: IStackItemStyles = {
-      root: {
-        alignItems: 'center',    
-        display: 'flex',
-        height: 75,
-        justifyContent: 'center',
-        overflow: 'hidden',
-        width: 200,
-      },
-    };
-
-    // Tokens definition    
-    const innerStackTokens: IStackTokens = {
-      childrenGap: 5,
-      padding: 10,
-    };
-    
-    const stackStyles: IStackStyles = {
-      root: {        
-        overflow: 'hidden',
-        width: '100%',
-      },
-    };
-
-    const backIcon: IIconProps = { iconName: 'NavigateBack' };
+  render() {    
+    const backIcon: IIconProps = { iconName: 'PageLeft'};
     const homeIcon: IIconProps = { iconName: 'Home' };
-    const calloutProps = { gapSpace: 0 };
 
-    // The TooltipHost root uses display: inline by default.
-    // If that's causing sizing issues or tooltip positioning issues, try overriding to inline-block.
-    const hostStyles: Partial<ITooltipHostStyles> = { root: { display: 'inline-block' } };
+    const iconButtonStyles:IButtonStyles = {
+      icon: {color: '#6264A7', fontSize: 56},
+      root: {
+        width: 70,
+        height: 70,
+        backgroundColor: 'transparent',
+        margin: 0,
+        padding: 7,
+        selectors: {
+          '& .ms-Button-icon:hover, .ms-Button-flexContainer:hover': {
+            backgroundColor: 'transparent',
+            color: 'rgba(70, 71, 117, 1)'
+          },
+        }
+      },
+    };
 
     return (      
-      <Stack horizontal styles={stackStyles} tokens={innerStackTokens}>
-        <Stack.Item grow styles={buttonStackItemStyles}>
-          {
-            this.props.showBack &&          
-            <TooltipHost
-              content="Navigate Back to Previous Screen"
-              // This id is used on the tooltip itself, not the host
-              // (so an element with this id only exists when the tooltip is shown)           
-              calloutProps={calloutProps}
-              styles={hostStyles} >
-              <IconButton iconProps={backIcon} title="Navigate Back to Previous Screen" ariaLabel="Navigate Back to Previous Screen" />
-            </TooltipHost>
-          }
-        </Stack.Item>
-        <Stack.Item grow styles={buttonStackItemStyles}>
-         {
-            this.props.showHome &&          
-            <TooltipHost
-              content="Navigate Home"
-              // This id is used on the tooltip itself, not the host
-              // (so an element with this id only exists when the tooltip is shown)           
-              calloutProps={calloutProps}
-              styles={hostStyles} >
-              <IconButton iconProps={homeIcon} title="Navigate to Home" ariaLabel="Navigate to Home" />
-            </TooltipHost>
-          }
-        </Stack.Item>
-        <Stack.Item grow disableShrink styles={textStackItemStyles}>
-          {
-            this.props.title
-          }
-        </Stack.Item>
-        <Stack.Item grow styles={logoStackItemStyles}>
-          <Image src='logo.png' width="200px" alt="VaxApp" />
-        </Stack.Item>
-      </Stack>    
-
-      // <div className='header'>
-      //   <h1>{ this.props.title}</h1>
-      // </div>
+      <div className="header">        
+        {
+          this.props.showBack &&                    
+          <IconButton 
+            iconProps={backIcon} 
+            title="Navigate Back to Previous Screen" 
+            ariaLabel="Navigate Back to Previous Screen" 
+            className="back"
+            onClick={this.goBack}
+            styles={iconButtonStyles}              
+          />          
+        }      
+        {
+          this.props.showHome &&                    
+          <IconButton 
+            iconProps={homeIcon} 
+            title="Navigate to Home" 
+            ariaLabel="Navigate to Home" 
+            className="home" 
+            onClick={this.goToHome} 
+            styles={iconButtonStyles} 
+          />          
+        }
+        <div className="title">{this.props.title}</div>                  
+        <Image src='logo.png' height="65px" alt="VaxApp" className="logo" />        
+      </div>          
     );
   }
 }

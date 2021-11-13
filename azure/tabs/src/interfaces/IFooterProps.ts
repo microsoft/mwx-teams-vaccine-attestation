@@ -7,6 +7,7 @@ interface IFooterProps extends RouteComponentProps {
   primaryButtonText?: string|undefined;
   primaryButtonDisabled?: boolean|undefined;
   onPrimaryButtonClicked?: () => void|undefined;  
+  primaryText?: string|undefined;
 }
 
 export default IFooterProps;

@@ -1,8 +1,88 @@
+html, body {
+  margin: 0;
+  height: 100%; /* can also use viewport units (height: 100vh) */
+}
+
+hr { 
+  display: block; 
+  height: 2px;
+  border: 0; 
+  border-top: 2px solid #6264A7;
+  margin: 7px 0; 
+  padding: 0; 
+}
+
+.ms-Checkbox-text {
+  font-size: 16pt;
+}
+
+.ms-Label {
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+.ms-TextField-field {
+  font-size: 16pt;
+}
+
+.ms-PeoplePicker {
+  font-size: 16pt;
+}
+
+.taag-required::after {
+  content: " *";
+  color: rgb(164, 38, 44);
+  padding-right: 12px;
+}
+
+.attestation .fieldRow {  
+  margin-bottom: 12px;
+}
+
 .header {
   width: 100%;
   background-color: rgba(239,239,239,1);
   color: rgba(98, 100, 167, 1);
   height: 75px;
+  display: inline;
+  position:absolute; 
+  top:0px; 
+  left:20px; 
+  height:75px; 
+  right:20px;
+  overflow:hidden;
+}
+
+.header .back {
+  position: absolute;
+  top: 5px;
+  left: 20px;
+}
+
+.header .home {
+  position: absolute;
+  top: 5px;
+  left: 90px;
+}
+
+.header .logo {
+  top: 2px;
+  position: absolute;
+  right: 60px;
+}
+
+.header .title {
+  top: 5px;
+  position: absolute;
+  top: 0;
+  left: 250px;
+  right: 250px;
+  text-align: center;
+  color: #6264A7;
+  font-size: 40px;
+  font-family: sans-serif;
+  padding: 5px 0px;
+  font-weight: bold;
 }
 
 .footer {
@@ -11,4 +91,201 @@
   color: rgba(98, 100, 167, 1);
   height: 75px;
   text-align: center;
+  position:absolute; 
+  bottom:0px; 
+  left:20px; 
+  right:20px; 
+  overflow:hidden;  
+  align-items: center;
+  justify-content: center;
+  font-size: 16pt;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+}
+
+.footer .primary {
+  height: 40px;  
+  padding: 16px;  
+  background-color: #6264A7;
+  border-color: #6264A7;
+  font-size: 16pt;
+}
+
+.footer .primary:hover {
+  background-color:rgba(70, 71, 117, 1);
+  border-color: rgba(70, 71, 117, 1);
+}
+
+.footer .primary:disabled {
+  background-color: rgb(237, 235, 233);
+  color: rgb(200, 198, 196);
+  border-color: rgb(237, 235, 233);
+}
+
+.footer .primaryText { 
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.content {
+  position:absolute; 
+  top:75px; 
+  bottom:75px; 
+  left:20px; 
+  right:20px; 
+  overflow: auto;
+  background-color: #ffffff;    
+  padding: 5px 30px 5px 30px;
+  font-size: 16pt;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contentFullWidth {
+  position:absolute; 
+  top:75px; 
+  bottom:75px; 
+  
+  overflow: auto;
+  background-color: #ffffff;    
+  padding: 5px 0px 5px 0px;
+  font-size: 16pt;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contentFullWidth .section {
+  margin-top: 7px;
+  left:20px; 
+  right:20px; 
+  padding: 0px 30px 0px 30px;
+}
+
+.content .sectionHeader,
+.contentFullWidth .sectionHeader {
+  color: #ffffff;
+  background-color: #6264a7;
+  height: 60px;
+  width: 100%;
+  text-align: center;  
+  align-items: center;
+  justify-content: center;
+  vertical-align: center;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.contentFullWidth .fieldName {  
+  font-family: "Segoe UI", "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16pt;
+  font-weight: bold;
+  color: rgb(37, 36, 36);
+  box-sizing: border-box;
+  box-shadow: none;
+  margin: 0px;
+  display: block;
+  padding: 5px 0px;
+  overflow-wrap: break-word;
+  text-align: start;
+}
+
+.content .scenery {
+  width: 50%;
+}
+
+.sceneryContent {
+  position:absolute; 
+  top:75px; 
+  bottom:75px; 
+  left:20px; 
+  right:20px; 
+  overflow: auto;
+  background-color: #ffffff;    
+  font-size: 16pt;
+  font-family: sans-serif;    
+}
+
+.sceneryContent .image {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+
+.sceneryContent .controls {
+  float: left;
+  width: 50%;
+  height: 100%;
+  padding: 5px 30px 5px 30px;
+  text-align: center;
+}
+
+.sceneryContent .controls .text {
+  font-size: 16pt;
+  font-weight: bolder;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sceneryContent .controls .button, .sceneryContent .controls .primaryButton {
+  width: 500px;
+  height: 100px;
+  border-color: #6264A7;
+  font-size: 16pt;
+  font-weight: bolder;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sceneryContent .controls .button  { 
+  color: #6264A7;
+  background-color: #ffffff;
+}
+
+.sceneryContent .controls .primaryButton  { 
+  color: #ffffff;
+  background-color: #6264A7;
+}
+
+.sceneryContent .controls .button:hover, .sceneryContent .controls .primaryButton:hover {
+  background-color:rgba(70, 71, 117, 1);
+  border-color: rgba(70, 71, 117, 1);
+  color: #ffffff;
+}
+
+.summary {  
+  text-align: center;  
+  align-content: center;
+  display: flex;  
+  justify-content: center;
+}
+
+.summaryFields {    
+  max-width: 1200px;
+  text-align: left;  
+}
+
+.summaryPrompt {
+  margin-top: 20px;
+  margin-bottom: 10px;  
+  font-size: 20pt;
+}
+
+.summaryRow 
+{
+  clear: both;
+  margin-bottom: 20px;  
+}
+
+.summaryField 
+{
+  float:left;  
+  margin-right: 50px;
+  margin-bottom: 35px;
+  width: 500px;
+}
+
+.summaryField .summaryFieldLabel
+{
+ font-weight: bold; 
+}
+
+.summaryField .summaryFieldValue {
+  margin-left: 7px;
 }
