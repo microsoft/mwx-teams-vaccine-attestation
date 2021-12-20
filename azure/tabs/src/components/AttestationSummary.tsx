@@ -28,7 +28,7 @@ class AttestationSummary extends React.Component<RouteComponentProps<{ id:string
     const id = this.props.match.params.id;
     
     if (id !== undefined) {
-      this._appServices.getAttestationSummary(Number(id))
+      this._appServices.getAttestationSummary(id)
         .then(summary => { this.setState({ summary: summary }) });
     }
     this._appServices.getAttestationSummarySettings()

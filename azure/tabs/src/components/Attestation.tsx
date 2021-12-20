@@ -147,7 +147,7 @@ class Attestation extends React.Component<RouteComponentProps, IAttestationState
     }
     else {
       attestation.attestationStatusId = Number(option.key);
-      const status = this.state.settings?.attestationStatuses.find(item => { return item.id === attestation.attestationStatusId });
+      const status = this.state.settings?.vaccinationStatuses.find(item => { return item.id === attestation.attestationStatusId });
 
       if (!status?.requireTestDate) {
         attestation.covidTestDate = null;
@@ -217,7 +217,7 @@ class Attestation extends React.Component<RouteComponentProps, IAttestationState
   }
 
   private getAttestationStatuses = (): IDropdownOption[] => {
-    const statuses = this.state.settings?.attestationStatuses;
+    const statuses = this.state.settings?.vaccinationStatuses;
 
     if ((statuses === null) || (statuses === undefined)) {
       return [];
@@ -233,7 +233,7 @@ class Attestation extends React.Component<RouteComponentProps, IAttestationState
       return false;
     }
 
-    const status = this.state.settings?.attestationStatuses.find(item => { return item.id === attestation.attestationStatusId });
+    const status = this.state.settings?.vaccinationStatuses.find(item => { return item.id === attestation.attestationStatusId });
     return status!.requireVaxDate;
   }
 
@@ -244,7 +244,7 @@ class Attestation extends React.Component<RouteComponentProps, IAttestationState
       return false;
     }
 
-    const status = this.state.settings?.attestationStatuses.find(item => { return item.id === attestation.attestationStatusId });
+    const status = this.state.settings?.vaccinationStatuses.find(item => { return item.id === attestation.attestationStatusId });
     return status!.requireTestDate;
   }
 
@@ -255,7 +255,7 @@ class Attestation extends React.Component<RouteComponentProps, IAttestationState
       return false;
     }
 
-    const status = this.state.settings?.attestationStatuses.find(item => { return item.id === attestation.attestationStatusId });
+    const status = this.state.settings?.vaccinationStatuses.find(item => { return item.id === attestation.attestationStatusId });
     return status!.requireDocuments;
   }
 
@@ -354,23 +354,23 @@ class Attestation extends React.Component<RouteComponentProps, IAttestationState
               />
             </div>
           </div>
-          <div className="SectionHeader">{this.state.settings?.attestationSectionHeader}</div>
+          <div className="SectionHeader">{this.state.settings?.vaccinationStatusSectionHeader}</div>
           <div className="Section">            
             {
-              this.state.settings?.attestationSectionBody && 
+              this.state.settings?.vaccinationStatusSectionBody && 
               <>
-                <div dangerouslySetInnerHTML={{ __html: this.state.settings?.attestationSectionBody?.replace(/\n/gi, "<br />") }} />     
+                <div dangerouslySetInnerHTML={{ __html: this.state.settings?.vaccinationStatusSectionBody?.replace(/\n/gi, "<br />") }} />     
                 <br/>
                 <hr/>
               </>         
             }            
             <div className="fieldRow">
               <Dropdown
-                label={ this.state.settings?.attestationStatusLabel}
+                label={ this.state.settings?.vaccinationStatusLabel}
                 selectedKey={this.state.attestation.attestationStatusId}
                 // eslint-disable-next-line react/jsx-no-bind
                 onChange={this.onAttestationStatusChange}
-                placeholder={ this.state.settings?.attestationStatusDescription}
+                placeholder={ this.state.settings?.vaccinationStatusDescription}
                 options={this.getAttestationStatuses()}
                 styles={dropdownStyles}
                 required

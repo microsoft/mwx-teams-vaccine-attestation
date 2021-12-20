@@ -2,7 +2,7 @@
   Contains the attestaion summary
 */
 interface IAttestationSummary {  
-  id: number;
+  id: string;
   attestationDate: Date;
   vaccineDate: Date|undefined|null;
   covidTestDate: Date|undefined|null;
@@ -13,6 +13,8 @@ interface IAttestationSummary {
   supervisorEmail: string;  
   workSite: string;
   attestationStatus: string;  
+  // attestationStatusIconName: string|undefined;
+  // attestationStatusIconColor: string|undefined;
   supportingFiles:string[]|undefined;
 }
 

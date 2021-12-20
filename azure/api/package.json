@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@azure/functions": "^1.2.2",
+    "@azure/storage-blob": "^12.8.0",
     "@microsoft/microsoft-graph-client": "^2.2.1",
     "@microsoft/teamsfx": "^0.2.0",
     "isomorphic-fetch": "^3.0.0"

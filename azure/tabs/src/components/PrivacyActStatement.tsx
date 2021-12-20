@@ -3,17 +3,17 @@ import { RouteComponentProps  } from "react-router-dom";
 import Header from "./controls/Header";
 import Footer from "./controls/Footer";
 import AppServices from "./../services/AppServices";
-import IPrivacyActStatementState from "./../interfaces/IPrivacyActStatementState"
+import IPrivacyActState from "./../interfaces/IPrivacyActState"
 /*
  * This component is used to display the organizations privacy act statement
  */
-class PrivacyActStatement extends React.Component<RouteComponentProps, IPrivacyActStatementState> {
+class PrivacyActStatement extends React.Component<RouteComponentProps, IPrivacyActState> {
   private _services:AppServices = new AppServices();
 
   constructor(props: RouteComponentProps) {
     super(props);   
-    this.state = { statementText: '' };    
-    this._services.getPrivacyActStatement().then(statement => this.setState({ statementText: statement }));
+    this.state = { settings: undefined };    
+    this._services.getPrivacyActSettings().then(settings => this.setState({ settings: settings }));
 
   }
 
@@ -21,11 +21,14 @@ class PrivacyActStatement extends React.Component<RouteComponentProps, IPrivacyA
     this.props.history.push('Home');    
   };
 
-  render() {      
+  render() {          
     return (
       <div>
-        <Header showBack={false} showHome={false} title={'Privacy Act Statement'} {...this.props}/>        
-        <div className="content" dangerouslySetInnerHTML={{ __html: this.state.statementText }} />
+        <Header showBack={false} showHome={false} title={this.state.settings?.header} {...this.props}/>  
+        { 
+          this.state.settings &&      
+          <div className="content" dangerouslySetInnerHTML={{ __html: this.state.settings.statement }} />
+        }
         <Footer primaryButtonText='I Acknolwedge the Privacy Statement' primaryButtonDisabled={false} onPrimaryButtonClicked={this.goToHome} {...this.props} />
       </div>
     );

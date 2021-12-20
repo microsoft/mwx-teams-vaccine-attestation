@@ -28,7 +28,8 @@ class Home extends React.Component<RouteComponentProps, IHomeState> {
 
     this._services.getHomeSettings().then(data => {
       ///TODO: check if the user is a member of the admin group
-      
+      ///TODO: check if the user is a member of the reviewer group
+
       this.setState( { links: data.links, isAdmin: true } );
     });
   }
@@ -82,6 +83,7 @@ class Home extends React.Component<RouteComponentProps, IHomeState> {
                 <DefaultButton text='View My Submissions' onClick={this.goToMyAttestations} className='button' />
               </Stack.Item>
               {
+                this.state.links && 
                 this.state.links.map(link => {
                   return (
                     <Stack.Item>
@@ -90,6 +92,9 @@ class Home extends React.Component<RouteComponentProps, IHomeState> {
                   );
                 })
               }
+              {/* <Stack.Item>
+                <DefaultButton text="Sample" onClick={() => {this.props.history.push('welcome')}} className='button' />                    
+              </Stack.Item> */}
             </Stack>
           </div>        
         </div>     

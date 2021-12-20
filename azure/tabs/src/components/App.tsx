@@ -18,7 +18,7 @@ import AdminSettings from "./AdminSettings";
 import AdminAttestationStatus from "./AdminAttestationStatus";
 import AdminLocations from "./AdminLocations";
 import AdminLinks from "./AdminLinks";
-
+import { Welcome } from "./sample/Welcome";
 
 
 /**
@@ -51,6 +51,7 @@ export default function App() {
             <Route exact path="/termsofuse" component={TermsOfUse} />            
             <Route exact path="/config" component={TabConfig} />
             <Route exact path="/tab" component={Tab} />
+            <Route exact path="/welcome" component={Welcome} />
           </>
         )}
       </Router>
